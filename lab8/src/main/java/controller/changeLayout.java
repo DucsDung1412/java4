@@ -6,12 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class changeLayout
  */
-@WebServlet( {"/change-layout/home", "/change-layout/about", "/change-layout/contact"} )
+@WebServlet({ "/change-layout/home", "/change-layout/about", "/change-layout/contact" })
 public class changeLayout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,17 +26,14 @@ public class changeLayout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		String mess = "";
 		if(request.getRequestURI().contains("home")) {
-			mess = "Trang chủ";
+			request.getSession().setAttribute("mess", "index");
 		} else if(request.getRequestURI().contains("about")) {
-			mess = "Giới thiệu";
+			request.getSession().setAttribute("mess", "about");
 		} else if(request.getRequestURI().contains("contact")) {
-			mess = "Liên hệ";
+			request.getSession().setAttribute("mess", "contact");
 		} 
-		session.setAttribute("mess", mess);
-		response.sendRedirect("../index.jsp");
+		response.sendRedirect("../NewFile.jsp");
 	}
 
 	/**
