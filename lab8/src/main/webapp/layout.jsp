@@ -155,7 +155,27 @@
 	<%		
 		} else if(s.equals("forgot")){
 	%>
-			<h1> forgot </h1>
+	<fmt:setBundle basename="forgot" scope="request"/>
+			<div class="modal-content rounded-4 shadow" style="width: 60%;">
+				<div class="modal-header p-5 pb-4 border-bottom-0">
+					<h1 class="fw-bold mb-0 fs-2"><fmt:message key="forgot.title"/></h1>
+				</div>
+		
+				<div class="modal-body p-5 pt-0">
+					<form class="">
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control rounded-3"
+								id="floatingInput" placeholder="name@example.com"> <label
+								for="floatingInput"><fmt:message key="forgot.email"/></label>
+						</div>
+		
+						<button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+							type="submit"><fmt:message key="forgot.btn"/></button>
+						<small class="text-body-secondary">By clicking Forgot
+							Passoword, you agree to the terms of use.</small>
+					</form>
+				</div>
+			</div>
 	<%		
 		}
 	%>
