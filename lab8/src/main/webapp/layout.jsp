@@ -91,7 +91,50 @@
 	<%		
 		} else if(s.equals("signup")){
 	%>
-			<h1> signup </h1>
+	<fmt:setBundle basename="signup" scope="request"/>
+			<div class="modal-content rounded-4 shadow" style="width: 60%;">
+				<div class="modal-header p-5 pb-4 border-bottom-0">
+					<h1 class="fw-bold mb-0 fs-2"><fmt:message key="signup.title"/></h1>
+				</div>
+		
+				<div class="modal-body p-5 pt-0">
+					<form class="">
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control rounded-3"
+								id="floatingInput" placeholder="name@example.com"> <label
+								for="floatingInput"><fmt:message key="signup.email"/></label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control rounded-3"
+								id="floatingPassword" placeholder="Password"> <label
+								for="floatingPassword"><fmt:message key="signup.password"/></label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control rounded-3"
+								id="floatingPassword" placeholder="Password"> <label
+								for="floatingPassword"><fmt:message key="signup.cfpassword"/></label>
+						</div>
+						<button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+							type="submit"><fmt:message key="signup.btn"/></button>
+						<small class="text-body-secondary">By clicking Sign up, you
+							agree to the terms of use.</small>
+						<hr class="my-4">
+						<h2 class="fs-5 fw-bold mb-3"><fmt:message key="signup.third"/></h2>
+						<button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+							type="submit">
+							<i class="fa-brands fa-twitter"></i> Sign up with Twitter
+						</button>
+						<button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+							type="submit">
+							<i class="fa-brands fa-facebook"></i> Sign up with Facebook
+						</button>
+						<button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+							type="submit">
+							<i class="fa-brands fa-github"></i> Sign up with GitHub
+						</button>
+					</form>
+				</div>
+			</div>
 	<%		
 		} else if(s.equals("signout")){
 	%>
