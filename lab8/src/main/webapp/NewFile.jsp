@@ -29,6 +29,6 @@
 		<a href="?lang=vi">Vietnamese </a>
 		<a href="?lang=en">English</a>
 		
-		<jsp:include page="/layout.jsp"></jsp:include>
+		<%-- <jsp:include page="/layout.jsp"></jsp:include> --%>
 	</body>
 </html>
