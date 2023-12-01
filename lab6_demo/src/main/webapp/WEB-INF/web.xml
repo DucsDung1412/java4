@@ -1,0 +1,69 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>signIn</servlet-name>
+  	<display-name>signIn</display-name>
+  	<description></description>
+  	<servlet-class>controller.signIn</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>signUp</servlet-name>
+  	<display-name>signUp</display-name>
+  	<description></description>
+  	<servlet-class>controller.signUp</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>signOut</servlet-name>
+  	<display-name>signOut</display-name>
+  	<description></description>
+  	<servlet-class>controller.signOut</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>forgotPassword</servlet-name>
+  	<display-name>forgotPassword</display-name>
+  	<description></description>
+  	<servlet-class>controller.forgotPassword</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>changePassword</servlet-name>
+  	<display-name>changePassword</display-name>
+  	<description></description>
+  	<servlet-class>controller.changePassword</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>changeProfile</servlet-name>
+  	<display-name>changeProfile</display-name>
+  	<description></description>
+  	<servlet-class>controller.changeProfile</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>signIn</servlet-name>
+  	<url-pattern>/sign-in</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>signUp</servlet-name>
+  	<url-pattern>/sign-up</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>signOut</servlet-name>
+  	<url-pattern>/sign-out</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>forgotPassword</servlet-name>
+  	<url-pattern>/forgot-password</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>changePassword</servlet-name>
+  	<url-pattern>/change-password</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>changeProfile</servlet-name>
+  	<url-pattern>/change-profile</url-pattern>
+  </servlet-mapping>
+</web-app>
